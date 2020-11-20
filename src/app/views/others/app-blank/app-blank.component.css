@@ -1,0 +1,53 @@
+
+.topHeading{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccc;
+}
+
+.sideNotificationDiv{
+    margin: 0px 19px;
+}
+
+.reminder-head{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.ReminderDetails{
+    margin-top: 10px;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .inputField{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .textField{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin: 5px 0px;
+  }

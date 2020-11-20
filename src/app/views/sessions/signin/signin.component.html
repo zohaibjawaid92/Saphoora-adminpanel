@@ -1,0 +1,63 @@
+<div class="page-wrap height-100">
+  <div class="session-form-hold">
+    <mat-progress-bar mode="determinate" class="session-progress"></mat-progress-bar>
+    <mat-card style="box-shadow: 0 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 3px 0 rgba(0, 0, 0, 0.19);">
+      <mat-card-content>
+        <div class="text-center pb-1">
+          <img src="../../../../assets/images/Slogo.png" alt="" height="91px" class="mb-05">
+          <div style="font-size: 23px;
+          font-weight: 600;">Start Managing</div>
+          <p style="" class="m-0 graytext">You may delay, but time will not</p>
+          <p style="" class="m-0 graytext">-Benjamin Franklin</p>
+        </div>
+        <form [formGroup]="signinForm" (ngSubmit)="signin()">
+          <div class="">
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                name="username"
+                [formControl]="signinForm.controls['username']"
+                placeholder="Username"
+                value="">
+            </mat-form-field>
+            <small 
+              *ngIf="signinForm.controls['username'].hasError('required') && signinForm.controls['username'].touched" 
+              class="form-error-msg"> Username is required </small>
+          </div>
+
+          <div class="">
+            <mat-form-field class="full-width">
+              <input 
+                type="password"
+                name="password"
+                matInput
+                [formControl]="signinForm.controls['password']"
+                placeholder="Password" 
+                value="">
+            </mat-form-field>
+            <small 
+              *ngIf="signinForm.controls['password'].hasError('required') && signinForm.controls['password'].touched" 
+              class="form-error-msg"> Password is required </small>
+          </div>
+          
+          <div class="pb-1" style="display: flex;justify-content: space-between;">
+            <div>
+              <mat-checkbox
+                name="rememberMe"
+                [formControl]="signinForm.controls['rememberMe']"
+                class="pb-1 graytext">Remember Me</mat-checkbox>
+            </div>
+            <div class="graytext" style="margin: 4px;">Forget Password?</div>
+          </div>          
+          <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1" [disabled]="signinForm.invalid">Login</button>
+          <!-- <div class="text-center">
+            <a [routerLink]="'/sessions/forgot-password'" class="mat-primary text-center full-width">Forgot password</a>
+            <span fxFlex></span>
+            <a [routerLink]="'/sessions/signup'" class="mat-primary text-center full-width">Create a new account</a>
+          </div> -->
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

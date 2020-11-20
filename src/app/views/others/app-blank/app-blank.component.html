@@ -1,0 +1,175 @@
+<!-- Dashboard card row -->
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="60" fxFlex.sm="50">
+  <div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
+      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+        <mat-card-title fxLayoutAlign="start center">
+          <small class="text-muted">Complete</small>
+          <span fxFlex></span>
+          <!-- <mat-chip
+          class="icon-chip" 
+          color="primary" 
+          selected="true"><mat-icon>trending_up</mat-icon>20%</mat-chip> -->
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">22,450</h3>
+          <!-- <small class="text-muted">Monthly</small> -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
+      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+        <mat-card-title>
+          <small class="text-muted">Incomplete</small>
+          <span fxFlex></span>
+          <!-- <mat-chip
+          class="icon-chip" 
+          color="accent" 
+          selected="true"><mat-icon>trending_up</mat-icon>10%</mat-chip> -->
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">377,670</h3>
+          <!-- <small class="text-muted">Monthly</small> -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
+      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+        <mat-card-title>
+          <small class="text-muted">Delay</small>
+          <span fxFlex></span>
+        </mat-card-title>
+        <mat-card-content>
+          <h3 class="m-0 font-normal">54,845</h3>
+          <!-- <small class="text-muted">Monthly</small> -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="90" fxFlex.sm="50">
+      <mat-tab-group>
+        <mat-tab label="Brands"> 
+          <div style="margin: 16px;">
+          <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Self aware panel
+              </mat-panel-title>
+              <mat-panel-description>
+                Master Kim's Korean BBQ
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+        </mat-accordion> 
+          </div>
+          <div style="margin: 16px;">
+            <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Self aware panel
+                </mat-panel-title>
+                <mat-panel-description>
+                  Master Kim's Korean BBQ
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion> 
+            </div>
+      </mat-tab>
+        <mat-tab label="Add Brands">
+          <div style="margin: 16px;    background: #eaeaea;border-radius: 5px;">
+            <div style="padding: 30px;" class="formexamp">
+            <form class="example-form">
+              <label>Brand Name</label>
+              <div class="example-full-width">
+                <input class="inputField"  placeholder="Enter Brand Name" value="">
+              </div>
+              <br>
+              <label>Description</label>
+              <div class="example-full-width">
+                <textarea class="textField" placeholder="Enter a Description"></textarea>
+              </div>
+              <br>
+             
+             <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Submit</button>
+
+            </form>
+          </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Add Branch"> 
+          <div style="margin: 16px;    background: #eaeaea;border-radius: 5px;">
+            <div style="padding: 30px;" class="formexamp">
+            <form class="example-form">
+              <label>Brand Name</label>
+              <div class="example-full-width">
+                <input class="inputField"  placeholder="Enter Brand Name" value="">
+              </div>
+              <br>
+              <label>Branch Name</label>
+              <div class="example-full-width">
+                <input class="inputField"  placeholder="Enter Branch Name" value="">
+              </div>
+              <br>
+              <label>Branch Location</label>
+              <div class="example-full-width">
+                <input class="inputField"  placeholder="Enter Branch Location" value="">
+              </div>
+              <br>
+              <label>Description</label>
+              <div class="example-full-width">
+                <textarea class="textField" placeholder="Enter a Description"></textarea>
+              </div>
+              <br>
+             
+             <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Submit</button>
+
+            </form>
+          </div>
+          </div>  
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>
+  <div style="border-left: 1px solid #ccc;" fxFlex="100" fxFlex.gt-sm="40" fxFlex.sm="50">
+    <div class="sideNotificationDiv">
+      <div class="topHeading">
+        <div>
+          <div style="font-size: 18px;font-weight: 500;">Hello,</div>
+          <div style="font-size: 22px;font-weight: 800;">Jonathan!</div>
+          <p style="color: gainsboro;">Lorem ipsum dolor sit</p>
+        </div>
+        <div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">notification_important</mat-icon>
+        </div>
+      </div>
+      <div class="RemindersDiv">
+        <div class="reminder-head">
+          <div style="font-size: 14px;font-weight: 800;">Reminders</div>
+          <div style="font-size: 14px;font-weight: 500;color: #00B26D;">View All ></div>
+        </div>
+        <div style="display: flex;" class="ReminderDetails">
+          <div style="margin-right: 20px;">
+            <mat-icon style="background: #e4dddd;
+            padding: 11px;" aria-hidden="false" aria-label="Example home icon">priority_high</mat-icon>
+          </div>
+          <div>
+            <div style="font-size: 15px;font-weight: 600;">Meetings</div>
+            <p style="color: gainsboro;">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
