@@ -37,11 +37,18 @@ export class NavigationService {
       state: 'others'
     },
     {
-      name: 'DOC',
-      type: 'extLink',
+      name: 'Sapparo',
+      type: 'link',
       tooltip: 'Documentation',
-      icon: 'library_books',
-      state: 'http://egret-doc.mhrafi.com/'
+      icon: 'person_search',
+      state: 'sapparo'
+    },
+    {
+      name: 'User Management',
+      type: 'link',
+      tooltip: 'Documentation',
+      icon: 'person_search',
+      state: 'user-management'
     }
   ]
 

@@ -1,26 +1,21 @@
 <!-- Dashboard card row -->
 <div fxLayout="row wrap">
-  <div fxFlex="100" fxFlex.gt-sm="60" fxFlex.sm="50">
+  <div fxFlex="100" fxFlex.gt-sm="75" fxFlex.sm="50">
   <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{scale:'.9',delay:'300ms'}}">
-      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+      <mat-card style="height: 68px;margin-left: 15px;margin-right: 15px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
         <mat-card-title fxLayoutAlign="start center">
           <small class="text-muted">Complete</small>
           <span fxFlex></span>
-          <!-- <mat-chip
-          class="icon-chip" 
-          color="primary" 
-          selected="true"><mat-icon>trending_up</mat-icon>20%</mat-chip> -->
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">22,450</h3>
-          <!-- <small class="text-muted">Monthly</small> -->
+          <h3 style="font-weight: 700;" class="">22,450</h3>
         </mat-card-content>
       </mat-card>
     </div>
 
     <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
-      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+      <mat-card style="height: 68px;margin-left: 15px;color:#00B26D;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
         <mat-card-title>
           <small class="text-muted">Incomplete</small>
           <span fxFlex></span>
@@ -30,20 +25,20 @@
           selected="true"><mat-icon>trending_up</mat-icon>10%</mat-chip> -->
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">377,670</h3>
+          <h3 style="font-weight: 700;" class="">377,670</h3>
           <!-- <small class="text-muted">Monthly</small> -->
         </mat-card-content>
       </mat-card>
     </div>
 
     <div fxFlex="100" fxFlex.gt-sm="23" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'300ms',scale:'.9'}}">
-      <mat-card style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
+      <mat-card style="height: 68px;margin-left: 15px;margin-right: 15px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);">
         <mat-card-title>
           <small class="text-muted">Delay</small>
           <span fxFlex></span>
         </mat-card-title>
         <mat-card-content>
-          <h3 class="m-0 font-normal">54,845</h3>
+          <h3 style="font-weight: 700;" class="">54,845</h3>
           <!-- <small class="text-muted">Monthly</small> -->
         </mat-card-content>
       </mat-card>
@@ -57,15 +52,34 @@
           <mat-accordion>
           <mat-expansion-panel (opened)="panelOpenState = true"
                                (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
               <mat-panel-title>
-                Self aware panel
+                <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
               </mat-panel-title>
               <mat-panel-description>
-                Master Kim's Korean BBQ
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                  <div>Offers are certified,Argue beef</div>
+                </div>
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <p>I'm visible because I am open</p>
+            <mat-accordion>
+              <mat-expansion-panel style="background-color: #f9f6f6;" (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <!-- <mat-panel-title>
+                    <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
+                  </mat-panel-title> -->
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                      <div>Offers are certified,Argue beef</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
           </mat-expansion-panel>
         </mat-accordion> 
           </div>
@@ -73,12 +87,15 @@
             <mat-accordion>
             <mat-expansion-panel (opened)="panelOpenState = true"
                                  (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
+              <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
                 <mat-panel-title>
-                  Self aware panel
+                  <img style="margin : 10px;" src="../../../../assets/images/sapparo.png" height="65px" alt="">
                 </mat-panel-title>
                 <mat-panel-description>
-                  Master Kim's Korean BBQ
+                  <div style="margin-top: 17px;">
+                    <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Sapparo Revolving Sushi</div>
+                    <div>Offers are certified,Argue beef</div>
+                  </div>
                 </mat-panel-description>
               </mat-expansion-panel-header>
               <p>I'm visible because I am open</p>
@@ -87,7 +104,7 @@
             </div>
       </mat-tab>
         <mat-tab label="Add Brands">
-          <div style="margin: 16px;    background: #eaeaea;border-radius: 5px;">
+          <div style="margin: 16px;">
             <div style="padding: 30px;" class="formexamp">
             <form class="example-form">
               <label>Brand Name</label>
@@ -100,7 +117,11 @@
                 <textarea class="textField" placeholder="Enter a Description"></textarea>
               </div>
               <br>
-             
+              <label>Add Photo</label>
+              <div class="example-full-width">
+              <input type="file" name="fileToUpload">
+              </div>
+              <br>
              <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Submit</button>
 
             </form>
@@ -108,12 +129,27 @@
           </div>
         </mat-tab>
         <mat-tab label="Add Branch"> 
-          <div style="margin: 16px;    background: #eaeaea;border-radius: 5px;">
+          <div style="margin: 16px;">
             <div style="padding: 30px;" class="formexamp">
             <form class="example-form">
               <label>Brand Name</label>
               <div class="example-full-width">
-                <input class="inputField"  placeholder="Enter Brand Name" value="">
+                <select class="inputField">
+                  <option value="0">Select car:</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                  <option value="7">Land Rover</option>
+                  <option value="8">Mercedes</option>
+                  <option value="9">Mini</option>
+                  <option value="10">Nissan</option>
+                  <option value="11">Toyota</option>
+                  <option value="12">Volvo</option>
+                </select>
+                <!-- <input class="inputField"  placeholder="Role" value=""> -->
               </div>
               <br>
               <label>Branch Name</label>
@@ -131,7 +167,11 @@
                 <textarea class="textField" placeholder="Enter a Description"></textarea>
               </div>
               <br>
-             
+              <label>Add Photo</label>
+              <div class="example-full-width">
+              <input type="file" name="fileToUpload">
+              </div>
+              <br>
              <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Submit</button>
 
             </form>
@@ -142,7 +182,7 @@
     </div>
   </div>
 </div>
-  <div style="border-left: 1px solid #ccc;" fxFlex="100" fxFlex.gt-sm="40" fxFlex.sm="50">
+  <div style="border-left: 1px solid #ccc;" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50">
     <div class="sideNotificationDiv">
       <div class="topHeading">
         <div>

@@ -33,6 +33,30 @@ export const rootRouterConfig: Routes = [
       }
     ]
   },
+  {
+    path: '', 
+    component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'user-management', 
+        loadChildren: './views/user-management/user-management.module#UserManagementModule', 
+        data: { title: 'USER MANAGEMENT', breadcrumb: 'User Management'}
+      }
+    ]
+  },
+  {
+    path: '', 
+    component: AdminLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'sapparo', 
+        loadChildren: './views/sapparorevolving/sapparorevolving.module#SapparoRevolvingModule', 
+        data: { title: 'Sapparo Revolving Sushi', breadcrumb: 'Sapparo Revolving Sushi'}
+      }
+    ]
+  },
   { 
     path: '**', 
     redirectTo: 'sessions/404'

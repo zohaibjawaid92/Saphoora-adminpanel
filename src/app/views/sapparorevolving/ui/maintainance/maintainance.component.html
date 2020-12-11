@@ -1,0 +1,74 @@
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Pending">
+    <div class="maintainanceComponent">  
+      <table id="customers">
+        <tr>
+          <th>Location</th>
+          <th>Reason</th>
+          <th>Priority</th>
+          <th>Photo</th>
+          <th>Brands</th>
+          <th>Branch</th>
+          <th>Role</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>471 UK ROAD</td>
+          <td> </td>
+          <td>Urgent</td>
+          <td> </td>
+          <td>Levis</td>
+          <td>Gulshan,PK</td>
+          <td>Manager</td>
+          <td><mat-slide-toggle></mat-slide-toggle> </td>
+        </tr>
+        <tr>
+          <td>471 UK ROAD</td>
+          <td> </td>
+          <td>Urgent</td>
+          <td> </td>
+          <td>Levis</td>
+          <td>Gulshan,PK</td>
+          <td>Manager</td>
+          <td><mat-slide-toggle></mat-slide-toggle> </td>
+        </tr>
+      </table>
+    </div>    
+  </mat-tab>
+  <mat-tab label="Completed">
+    <div class="maintainanceComponent">  
+      <table id="customers">
+        <tr>
+          <th>Location</th>
+          <th>Reason</th>
+          <th>Priority</th>
+          <th>Photo</th>
+          <th>Brands</th>
+          <th>Branch</th>
+          <th>Role</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>471 UK ROAD</td>
+          <td> </td>
+          <td>Urgent</td>
+          <td> </td>
+          <td>Levis</td>
+          <td>Gulshan,PK</td>
+          <td>Manager</td>
+          <td><mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle> </td>
+        </tr>
+        <tr>
+          <td>471 UK ROAD</td>
+          <td> </td>
+          <td>Urgent</td>
+          <td> </td>
+          <td>Levis</td>
+          <td>Gulshan,PK</td>
+          <td>Manager</td>
+          <td><mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle> </td>
+        </tr>
+      </table>
+    </div>
+  </mat-tab>
+</mat-tab-group>

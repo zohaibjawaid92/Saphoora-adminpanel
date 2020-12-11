@@ -1,0 +1,431 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+    <div class="sidetabs">
+      <div (click)="selectedIndex(0)" class="selectedTabs">
+        <img src="../../../../../assets/images/hireme.png" style="margin: 10px;" height="45px" alt="">
+        <div style="font-size: 17px;    margin-top: 22px;;font-weight: 700;">New Hire Onboarding</div>
+        <img style="height: 27px;    margin-top: 21px;" src="../../../../../assets/images/next.png" alt="">
+      </div>
+      <div (click)="selectedIndex(1)" class="selectedTabs">
+        <img src="../../../../../assets/images/food.png" style="margin: 10px;" height="45px" alt="">
+        <div style="font-size: 17px;    margin-top: 22px;;font-weight: 700;">Food Safety Trainer</div>
+        <img style="height: 27px;    margin-top: 21px;" src="../../../../../assets/images/next.png" alt="">
+      </div>
+      <div (click)="selectedIndex(2)" class="selectedTabs">
+        <img src="../../../../../assets/images/recipe.png" style="margin: 10px;" height="45px" alt="">
+        <div style="font-size: 17px;    margin-top: 22px;;font-weight: 700;">Recipe Book</div>
+        <img style="height: 27px;    margin-top: 21px;" src="../../../../../assets/images/next.png" alt="">
+      </div>
+      <div (click)="selectedIndex(3)" class="selectedTabs">
+        <img src="../../../../../assets/images/playvideo.png" style="margin: 10px;" height="45px" alt="">
+        <div style="font-size: 17px;    margin-top: 22px;;font-weight: 700;">How to Book</div>
+        <img style="height: 27px;    margin-top: 21px;" src="../../../../../assets/images/next.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div fxFlex="100" fxFlex.gt-sm="40" fxFlex.sm="40">
+    <div *ngIf="selectedTabInfo === 0" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>Details</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="Title(Required)" value="">
+        </div>
+        <br>   
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+    <div *ngIf="selectedTabInfo === 1" class="sidetabs">
+      <div style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <button style="width: 100%;" (click)="selectedFoodTraine(1)" mat-raised-button color="primary">Add Food Trainee</button>
+        <br>
+        <button style="width: 100%;margin-top: 14px;" (click)="selectedFoodTraine('viewDeleteFoodTrainee')" mat-raised-button color="primary">View/Edit Recipe</button>
+      </div>
+    </div>
+    <div *ngIf="selectedTabInfo === 2" class="sidetabs">
+      <div style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <button style="width: 100%;" (click)="selectedRecipie(1)" mat-raised-button color="primary">Add Recipe</button>
+        <br>
+        <button style="width: 100%;margin-top: 14px;" (click)="selectedRecipie('viewDeleteRecipie')" mat-raised-button color="primary">View/Edit Recipe</button>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTabInfo === 3" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>URL</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="URL(Required)" value="">
+        </div>
+        <br>   
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+
+    <!-- Recipe Book Start -->
+    <div *ngIf="selectedRecipieInfo === 1" class="sidetabs">
+      <div style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <button (click)="selectedRecipie('addCruisine')" style="width: 100%;" mat-raised-button color="primary">Add Cruisine</button>
+        <br>
+        <button (click)="selectedRecipie('addRecipie')" style="width: 100%;margin-top: 14px;" mat-raised-button color="primary">Add Recipe</button>
+      </div>
+    </div>
+
+    <div *ngIf="selectedRecipieInfo === 'addCruisine'" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>Cruisine Name</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="Enter Cruisine Name" value="">
+        </div>
+        <br>
+        <label>Brands</label>
+        <div class="example-full-width1">
+          <select class="inputField1">
+            <option value="0">Sub Branch</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Citroen</option>
+            <option value="4">Ford</option>
+            <option value="5">Honda</option>
+            <option value="6">Jaguar</option>
+            <option value="7">Land Rover</option>
+            <option value="8">Mercedes</option>
+            <option value="9">Mini</option>
+            <option value="10">Nissan</option>
+            <option value="11">Toyota</option>
+            <option value="12">Volvo</option>
+          </select>
+        </div>
+        <br>
+        <label>Branch</label>
+        <div class="example-full-width1">
+          <select class="inputField1">
+            <option value="0">Sub Branch</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Citroen</option>
+            <option value="4">Ford</option>
+            <option value="5">Honda</option>
+            <option value="6">Jaguar</option>
+            <option value="7">Land Rover</option>
+            <option value="8">Mercedes</option>
+            <option value="9">Mini</option>
+            <option value="10">Nissan</option>
+            <option value="11">Toyota</option>
+            <option value="12">Volvo</option>
+          </select>
+        </div>
+        <br>   
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+
+    <div *ngIf="selectedRecipieInfo === 'addRecipie'" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>Recipie Name</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="Enter Recipe Name" value="">
+        </div>
+        <br>
+        <label for="">Procedure</label>
+        <div class="example-full-width">
+          <textarea class="textField" placeholder="Enter Procedure"></textarea>
+        </div>
+        <br>
+        <label for="">Ingrediant</label>
+        <div class="example-full-width">
+          <textarea class="textField" placeholder="Enter Ingrediant"></textarea>
+        </div>
+        <br>
+        <label>Brands</label>
+        <div class="example-full-width1">
+          <select class="inputField1">
+            <option value="0">Sub Branch</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Citroen</option>
+            <option value="4">Ford</option>
+            <option value="5">Honda</option>
+            <option value="6">Jaguar</option>
+            <option value="7">Land Rover</option>
+            <option value="8">Mercedes</option>
+            <option value="9">Mini</option>
+            <option value="10">Nissan</option>
+            <option value="11">Toyota</option>
+            <option value="12">Volvo</option>
+          </select>
+        </div>
+        <br>
+        <label>Branch</label>
+        <div class="example-full-width1">
+          <select class="inputField1">
+            <option value="0">Sub Branch</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Citroen</option>
+            <option value="4">Ford</option>
+            <option value="5">Honda</option>
+            <option value="6">Jaguar</option>
+            <option value="7">Land Rover</option>
+            <option value="8">Mercedes</option>
+            <option value="9">Mini</option>
+            <option value="10">Nissan</option>
+            <option value="11">Toyota</option>
+            <option value="12">Volvo</option>
+          </select>
+        </div>
+        <br>  
+        <label>Add Photo</label>
+        <div class="example-full-width">
+        <input type="file" name="fileToUpload">
+        </div>
+        <br> 
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+
+    <div *ngIf="selectedRecipieInfo === 'viewDeleteRecipie'" class="sidetabs">
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                  <div>Offers are certified,Argue beef</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel style="background-color: #f9f6f6;" (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <!-- <mat-panel-title>
+                    <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
+                  </mat-panel-title> -->
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                      <div>Offers are certified,Argue beef</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                  <div>Offers are certified,Argue beef</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel style="background-color: #f9f6f6;" (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <!-- <mat-panel-title>
+                    <img style="margin : 10px;" src="../../../../assets/images/kims.png" height="65px" alt="">
+                  </mat-panel-title> -->
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Master Kim's Korean BBQ</div>
+                      <div>Offers are certified,Argue beef</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+    </div>
+    <!--  Recipe Book End -->
+
+    <!-- Food Traineeee startt -->
+    <div *ngIf="selectedFoodTrainie === 1" class="sidetabs">
+      <div style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <button (click)="selectedFoodTraine('addCategory')" style="width: 100%;" mat-raised-button color="primary">Add Category</button>
+        <br>
+        <button (click)="selectedFoodTraine('addSubCategory')" style="width: 100%;margin-top: 14px;" mat-raised-button color="primary">Add Sub-Category</button>
+      </div>
+    </div>
+
+    <div *ngIf="selectedFoodTrainie === 'addCategory'" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>Cateogry Name</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="Enter Category Name" value="">
+        </div>
+        <br>
+        <label>Add Photo</label>
+        <div class="example-full-width1">
+          <input type="file" name="fileToUpload">
+        </div>
+        <br>   
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+
+    <div *ngIf="selectedFoodTrainie === 'addSubCategory'" class="sidetabs">
+      <form style="margin-top: 40px;box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);background: white;" class="example-form1">
+        <br>
+        <label>Sub-Category Name</label>
+        <div class="example-full-width1">
+          <input type="text" class="inputField1"  placeholder="Enter Sub Category Name" value="">
+        </div>
+        <br>
+        <label>Add Photo</label>
+        <div class="example-full-width1">
+          <input type="file" name="fileToUpload">
+        </div>
+        <br> 
+       <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+      </form>
+    </div>
+
+    <div *ngIf="selectedFoodTrainie === 'viewDeleteFoodTrainee'" class="sidetabs">
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../../assets/images/washhand.png" height="40px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Hand Washing</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="margin-bottom: 7px;">Water Temperature</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../../assets/images/temperatue.png" height="40px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Temperature</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="margin-bottom: 7px;">Water Temperature</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../../assets/images/tcs.png" height="40px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">TCS</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="margin-bottom: 7px;">Water Temperature</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+      <div style="margin-top: 20px;">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header collapsedHeight="*" expandedHeight="*">
+              <mat-panel-title>
+                <img style="margin : 10px;" src="../../../../../assets/images/cooktemp.png" height="40px" alt="">
+              </mat-panel-title>
+              <mat-panel-description>
+                <div style="margin-top: 17px;">
+                  <div style="color: black;font-weight: 800;font-size: 17px;margin-bottom: 7px;">Cook Temperature</div>
+                </div>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true"
+                                   (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-description>
+                    <div style="margin-top: 17px;">
+                      <div style="margin-bottom: 7px;">Cook Temperature</div>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </mat-expansion-panel>
+        </mat-accordion> 
+      </div>
+    </div>
+
+    <!-- Food Traineee end -->
+  </div>
+</div>

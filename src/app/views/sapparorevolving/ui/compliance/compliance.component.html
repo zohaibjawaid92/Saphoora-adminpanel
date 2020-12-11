@@ -1,0 +1,45 @@
+<div fxLaout="row wrap">
+<div fxFlex="100" fxFlex.gt-sm="40" fxFlex.sm="100" style="margin:20px">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Sub Branch
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+     <div>
+      <section style="display: flex;flex-direction: column;" class="example-section">
+        <mat-checkbox class="example-margin">Sub Branch 1</mat-checkbox>
+        <mat-checkbox class="example-margin">Sub Branch 2</mat-checkbox>
+        <mat-checkbox class="example-margin">Sub Branch 3</mat-checkbox>
+        <mat-checkbox class="example-margin">Sub Branch 4</mat-checkbox>
+      </section>
+     </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <div style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);
+  padding: 13px;display: flex;justify-content: space-between;">
+  <div style="margin-top: 3px;">1.Open Sign on?</div>
+  <div>
+    <span style="background: #00b26d;color: white;padding: 1px;" class="material-icons">delete</span>
+    <span style="background: #00b26d;color: white;padding: 1px;margin-left: 5px;" class="material-icons">assignment</span>
+  </div>
+  </div>
+  <br>
+  <div style="box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);
+  padding: 13px;display: flex;justify-content: space-between;">
+  <div style="margin-top: 3px;">2.Rice Wash Push Down?</div>
+  <div>
+    <span style="background: #00b26d;color: white;padding: 1px;" class="material-icons">delete</span>
+    <span style="background: #00b26d;color: white;padding: 1px;margin-left: 5px;" class="material-icons">assignment</span>
+  </div>
+  </div>
+  <br>
+  <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+
+</div>
+</div>

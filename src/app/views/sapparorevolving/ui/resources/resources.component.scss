@@ -1,25 +1,16 @@
-
-.topHeading{
+.selectedTabs{
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #cccc;
+    justify-content: space-around;
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.19);
+    margin: 40px;
+    padding: 0px;
+    border-radius: 7px;
 }
-
-.sideNotificationDiv{
-    margin: 0px 19px;
-}
-
-.reminder-head{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3px;
-}
-
-.ReminderDetails{
-    margin-top: 10px;
-}
-
-.example-form {
+.selectedTabs:hover {
+    background-color: #00b26d;
+    color : white;
+  }
+.example-form1 {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
@@ -32,11 +23,17 @@
     border-radius: 6px;
   }
   
-  .example-full-width {
+  .example-full-width1 {
     width: 100%;
   }
 
-  .inputField{
+  .FieldsaditionalInfo{
+    background: #faf5f5cc;
+    padding: 9px;
+    border-radius: 4px;
+  }
+
+  .inputField1{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -57,17 +54,4 @@
     font-size: 16px;
     resize: none;
     margin: 5px 0px;
-  }
-
-  .mat-expansion-panel-header {
-    height: auto!important; 
-
-  }
-  .mat-tab-group > .mat-tab-header > .mat-tab-label-container > .mat-tab-list > .mat-tab
-  labels
-    .mat-tab-label[role^='tab'] {
-      min-width: 72px;
-    }
-  .mat-expansion-panel-description{
-    margin-top: 30px;
   }

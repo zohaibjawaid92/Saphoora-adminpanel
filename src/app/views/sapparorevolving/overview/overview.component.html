@@ -1,0 +1,42 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="75" fxFlex.sm="50">
+    <div class="tabsClass">
+      <mat-tab-group>
+        <mat-tab label="Compliance"> <app-compliance></app-compliance> </mat-tab>
+        <mat-tab label="Resources"> <app-resources></app-resources></mat-tab>
+        <mat-tab label="Maintainance"> <app-maintainance></app-maintainance> </mat-tab>
+        <mat-tab label="Calender"> <app-calender></app-calender> </mat-tab>
+      </mat-tab-group>
+    </div>
+</div>
+  <div style="border-left: 1px solid #ccc;" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50">
+    <div class="sideNotificationDiv">
+      <div class="topHeading">
+        <div>
+          <div style="font-size: 18px;font-weight: 500;">Hello,</div>
+          <div style="font-size: 22px;font-weight: 800;">Jonathan!</div>
+          <p style="color: gainsboro;">Lorem ipsum dolor sit</p>
+        </div>
+        <div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">notification_important</mat-icon>
+        </div>
+      </div>
+      <div class="RemindersDiv">
+        <div class="reminder-head">
+          <div style="font-size: 14px;font-weight: 800;">Reminders</div>
+          <div style="font-size: 14px;font-weight: 500;color: #00B26D;">View All ></div>
+        </div>
+        <div style="display: flex;" class="ReminderDetails">
+          <div style="margin-right: 20px;">
+            <mat-icon style="background: #e4dddd;
+            padding: 11px;" aria-hidden="false" aria-label="Example home icon">priority_high</mat-icon>
+          </div>
+          <div>
+            <div style="font-size: 15px;font-weight: 600;">Meetings</div>
+            <p style="color: gainsboro;">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

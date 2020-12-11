@@ -1,0 +1,168 @@
+<!-- Dashboard card row -->
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="75" fxFlex.sm="50">
+  <div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="90" fxFlex.sm="50"> 
+          <div>
+            <div style="padding: 30px;" class="formexamp">
+            <form style="    background: #eaeaea;padding: 26px 30px;border-radius: 5px;" class="example-form">
+              <label>Role</label>
+              <div class="example-full-width">
+                <select class="inputField">
+                  <option value="0">Select car:</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                  <option value="7">Land Rover</option>
+                  <option value="8">Mercedes</option>
+                  <option value="9">Mini</option>
+                  <option value="10">Nissan</option>
+                  <option value="11">Toyota</option>
+                  <option value="12">Volvo</option>
+                </select>
+                <!-- <input class="inputField"  placeholder="Role" value=""> -->
+              </div>
+              <br>
+              <label>Name</label>
+              <div class="example-full-width">
+                <input class="inputField"  placeholder="Enter Name" value="">
+              </div>
+              <br>
+              <label>Phone Number</label>
+              <div class="example-full-width">
+                <input class="inputField" type="number"  placeholder="Enter Phone" value="">
+              </div>
+              <br>
+              <label>Email</label>
+              <div class="example-full-width">
+                <input class="inputField"  type="email" placeholder="Enter Email" value="">
+              </div>
+              <br>
+              <label>Password</label>
+              <div class="example-full-width">
+                <input class="inputField" type="password"  placeholder="Enter Password" value="">
+              </div>
+              <br>
+              <label>Brands</label>
+              <div class="example-full-width">
+                <select class="inputField">
+                  <option value="0">Select Brands</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                  <option value="7">Land Rover</option>
+                  <option value="8">Mercedes</option>
+                  <option value="9">Mini</option>
+                  <option value="10">Nissan</option>
+                  <option value="11">Toyota</option>
+                  <option value="12">Volvo</option>
+                </select>
+                <!-- <input class="inputField"  placeholder="Role" value=""> -->
+              </div>
+              <br>
+              <label>Branches</label>
+              <div class="example-full-width">
+                <select class="inputField">
+                  <option value="0">Select Branches</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                  <option value="7">Land Rover</option>
+                  <option value="8">Mercedes</option>
+                  <option value="9">Mini</option>
+                  <option value="10">Nissan</option>
+                  <option value="11">Toyota</option>
+                  <option value="12">Volvo</option>
+                </select>
+                <!-- <input class="inputField"  placeholder="Role" value=""> -->
+              </div>
+              <br>
+             <button style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);" mat-raised-button class="mat-primary full-width mb-1">Create</button>
+
+            </form>
+          </div>
+          </div>  
+          <div style="margin: 16px;border-top: 1px solid #ccc;border-radius: 5px;border-bottom: 1px solid #ccc;padding: 10px;">          
+            <table id="customers">
+              <tr>
+                <th>Role</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email Address</th>
+                <th>Password</th>
+                <th>Brands</th>
+                <th>Branch</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td>Manager</td>
+                <td>Alex</td>
+                <td>+32313123</td>
+                <td>abc@fmail.com</td>
+                <td>abc@134</td>
+                <td>Levis</td>
+                <td>Defence,PK</td>
+                <td>
+                  <mat-icon color = "primary">create</mat-icon>
+                  <mat-icon color = "warn">delete_sweep</mat-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>Admin</td>
+                <td>Ryan</td>
+                <td>+3123123</td>
+                <td>daddy21@gmail.com</td>
+                <td>abc@134</td>
+                <td>Outfitters</td>
+                <td>Gulshan,PK</td>
+                <td>
+                  <mat-icon color = "primary">create</mat-icon>
+                  <mat-icon color = "warn">delete_sweep</mat-icon>
+                </td>
+              </tr>
+            </table>
+          </div>
+    </div>
+  </div>
+</div>
+  <div style="border-left: 1px solid #ccc;" fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50">
+    <div class="sideNotificationDiv">
+      <div class="topHeading">
+        <div>
+          <div style="font-size: 18px;font-weight: 500;">Hello,</div>
+          <div style="font-size: 22px;font-weight: 800;">Jonathan!</div>
+          <p style="color: gainsboro;">Lorem ipsum dolor sit</p>
+        </div>
+        <div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">notification_important</mat-icon>
+        </div>
+      </div>
+      <div class="RemindersDiv">
+        <div class="reminder-head">
+          <div style="font-size: 14px;font-weight: 800;">Reminders</div>
+          <div style="font-size: 14px;font-weight: 500;color: #00B26D;">View All ></div>
+        </div>
+        <div style="display: flex;" class="ReminderDetails">
+          <div style="margin-right: 20px;">
+            <mat-icon style="background: #e4dddd;
+            padding: 11px;" aria-hidden="false" aria-label="Example home icon">priority_high</mat-icon>
+          </div>
+          <div>
+            <div style="font-size: 15px;font-weight: 600;">Meetings</div>
+            <p style="color: gainsboro;">Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
