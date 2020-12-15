@@ -6,7 +6,6 @@ import {
   MatListModule,
   MatIconModule,
   MatButtonModule,
-  MatTableModule,
   MatCardModule,
   MatMenuModule,
   MatSlideToggleModule,
@@ -24,21 +23,20 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
 import { SharedModule } from './../../shared/shared.module';
-import { UserManagementRoutes } from "./user-management.routing";
-import { UserManagementAddComponent } from './user-management-add/user-management-add.component';
+import { DashboardRoutes} from './dashboard.routing';
+import { DashboardService} from './dashboard.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { UserManagementService} from './user-management.service';
 import { authInterceptor} from '../_helpers/api.interceptor';
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule,
-    MatListModule,
     HttpClientModule,
+    MatListModule,
     MatIconModule,
+    HttpModule,
     MatButtonModule,
     MatCardModule,
     MatMenuModule,
@@ -46,7 +44,6 @@ import { authInterceptor} from '../_helpers/api.interceptor';
     MatSlideToggleModule,
     MatGridListModule,
     MatChipsModule,
-    MatTableModule,
     MatCheckboxModule,
     MatRadioModule,
     MatTabsModule,
@@ -58,11 +55,9 @@ import { authInterceptor} from '../_helpers/api.interceptor';
     ChartsModule,
     FileUploadModule,
     SharedModule,
-    RouterModule.forChild(UserManagementRoutes)
+    RouterModule.forChild(DashboardRoutes)
   ],
-  providers : [ [UserManagementService , { provide: HTTP_INTERCEPTORS, useClass: authInterceptor, multi: true }]],
-  declarations: [
-   
-  UserManagementAddComponent]
+  providers : [ [DashboardService , { provide: HTTP_INTERCEPTORS, useClass: authInterceptor, multi: true }]],
+  declarations: [DashboardComponent]
 })
-export class UserManagementModule { }
+export class DashboardModule { }

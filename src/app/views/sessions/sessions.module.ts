@@ -11,7 +11,7 @@ import {
   MatIconModule
  } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { SessionsService} from './sessions.service';
 // import { CommonDirectivesModule } from './sdirectives/common/common-directives.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
@@ -20,11 +20,15 @@ import { SignupComponent } from './signup/signup.component';
 import { SessionsRoutes } from "./sessions.routing";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
-
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SessionsInterceptor } from './sessions.interceptor';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatProgressBarModule,
     MatButtonModule,
@@ -35,6 +39,7 @@ import { ErrorComponent } from './error/error.component';
     FlexLayoutModule,
     RouterModule.forChild(SessionsRoutes)
   ],
+  providers : [SessionsService , { provide: HTTP_INTERCEPTORS, useClass: SessionsInterceptor, multi: true }],
   declarations: [ForgotPasswordComponent, LockscreenComponent, SigninComponent, SignupComponent, NotFoundComponent, ErrorComponent]
 })
 export class SessionsModule { }

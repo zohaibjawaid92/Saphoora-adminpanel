@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  apiURL: 'developmentApi'
+  apiURL: 'developmentApi',
+  baseUrl : 'http://3.140.73.144:8080/'
 };
